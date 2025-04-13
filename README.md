@@ -9,6 +9,11 @@ outdated\cubeshaded.py
 
 ![image](https://github.com/user-attachments/assets/3f8d9380-1f21-4367-9ece-338861bdb4e4)
 
+Triangle.py
+
+![image](https://github.com/user-attachments/assets/68dfda0c-edce-4fe9-8f8f-417b9a17a931)
+
+
 
 requirements
 

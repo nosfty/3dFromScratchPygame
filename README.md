@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/bdc49986-b80d-4e94-bfb4-0ff9963d226a)# 🚀 Pygame 3D Renderer  
+# 🚀 Pygame 3D Renderer  
 
 **Pure 3D Rendering with Pygame (No OpenGL)** — A simple and efficient library for 3D graphics from scratch  
 

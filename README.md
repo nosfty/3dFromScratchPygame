@@ -17,10 +17,10 @@
 ## 🛠 Installation  
 
 1. Ensure you have Python 3.7+ installed  
-2. Install Pygame:  
+2. Install requirements:  
 
 ```bash  
-pip install pygame  
+pip install -r requirements.txt
 ```  
 
 3. Clone the repository or add the `corelibs` files to your project  

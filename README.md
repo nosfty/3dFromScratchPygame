@@ -1,4 +1,4 @@
-# 🚀 Pygame 3D Renderer  
+![image](https://github.com/user-attachments/assets/bdc49986-b80d-4e94-bfb4-0ff9963d226a)# 🚀 Pygame 3D Renderer  
 
 **Pure 3D Rendering with Pygame (No OpenGL)** — A simple and efficient library for 3D graphics from scratch  
 
@@ -136,3 +136,34 @@ camera.position.y -= 0.1  # Move up
 
 ## 📜 License  
 Distributed under the MIT License. See `LICENSE` for details.
+
+## Gallery 
+
+`Triangle.py (Latest)`
+
+![image](https://github.com/user-attachments/assets/929f0341-72dd-4fe0-b905-9d77a8712872)
+
+
+`Vertices coordinates`
+
+![Component 1](https://github.com/user-attachments/assets/a0236825-a15e-4e4b-a671-f723759bf587)
+
+`outdated/cubeshaded.py`
+
+![image](https://github.com/user-attachments/assets/5ea9d77f-b18c-424b-841f-a7424d2e3827)
+
+`outdated/render_q.py`
+
+![image](https://github.com/user-attachments/assets/d9502b04-747e-4b32-9a36-d0340381dfa5)
+
+![image](https://github.com/user-attachments/assets/b53ac122-89c5-4fe0-80fe-ec2fda2e131b)
+
+![image](https://github.com/user-attachments/assets/0eb44e9f-781b-4e93-b9b9-50fd569a5816)
+
+`outdated/main.py`
+
+![image](https://github.com/user-attachments/assets/9224a29e-d032-4d4f-adbd-3432f298e701)
+
+
+
+

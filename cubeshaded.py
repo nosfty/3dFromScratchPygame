@@ -115,4 +115,24 @@ def main():
         visible_faces = []
         for i, face in enumerate(cube_faces):
             face_3d = [rotated_vertices[idx] for idx in face]
-            if is_face_visible(face_3
+            if is_face_visible(face_3d):
+                depth = calculate_face_depth(face_3d)
+                visible_faces.append((depth, i, face))
+
+        visible_faces.sort(reverse=True, key=lambda x: x[0])
+
+        for depth, i, face in visible_faces:
+            polygon_points = [projected_vertices[idx] for idx in face]
+            pygame.draw.polygon(sc, face_colors[i], polygon_points)
+            pygame.draw.polygon(sc, (255, 255, 255), polygon_points, 1)
+
+        for edge in cube_edges:
+            start = projected_vertices[edge[0]]
+            end = projected_vertices[edge[1]]
+            pygame.draw.line(sc, (255, 255, 255), start, end, 1)
+
+        pygame.display.flip()
+        clock.tick(FPS)
+
+if __name__ == "__main__":
+    main()

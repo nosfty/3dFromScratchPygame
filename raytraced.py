@@ -4,9 +4,9 @@ import numpy as np
 from numba import njit, prange
 import time
 
-# Initialize pygame
+
 pygame.init()
-WIDTH, HEIGHT = 600, 400  # Уменьшенное разрешение
+WIDTH, HEIGHT = 600, 400 
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
@@ -18,9 +18,9 @@ INV_HEIGHT = 1.0 / HEIGHT
 # Scene parameters
 SPHERE_CENTER = np.array([0.0 - 0.8, 0.0 - 0.8, 0.0])
 SPHERE_RADIUS = 1.0
-CAMERA_POS = np.array([0.0, 0.0, -3.0])  # Камера смотрит на сферу
+CAMERA_POS = np.array([0.0, 0.0, -3.0]) 
 
-# Lighting parameters
+
 LIGHT_DISTANCE = 2.0
 light_angle = 0.0
 LIGHT_SPEED = 0.05
@@ -55,8 +55,7 @@ def ray_sphere_intersection(ray_origin, ray_dir, sphere_center, sphere_radius):
 def render_frame(width, height, light_dir, frame_buffer):
     for y in prange(height):
         for x in prange(width):
-            # Convert pixel coordinates to normalized device coordinates
-            # Изменено: убрано умножение на ASPECT_RATIO для правильного центрирования
+
             nx = (2.0 * (x + 0.5) * INV_WIDTH - 1.0)
             ny = (1.0 - 2.0 * (y + 0.5) * INV_HEIGHT) * (height / width)
 
@@ -67,17 +66,17 @@ def render_frame(width, height, light_dir, frame_buffer):
                 hit_point = CAMERA_POS + t1 * ray_dir
                 normal = normalize(hit_point - SPHERE_CENTER)
 
-                # Correct the light direction (it should point TOWARD the light)
+
                 light_vec = -light_dir
 
-                # Diffuse lighting
+
                 light_intensity = max(0.0, np.dot(normal, light_vec))
                 diffuse = light_intensity * 0.8
 
-                # Ambient lighting
+
                 ambient = 0.2
 
-                # Specular highlights (only if light is visible)
+ 
                 if light_intensity > 0:
                     reflect = 2.0 * np.dot(normal, light_vec)
                     reflected_light = normalize(light_vec - normal * reflect)

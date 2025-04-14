@@ -135,7 +135,7 @@ camera.position.y -= 0.1  # Move up
 5. Open a Pull Request  
 
 ## 📜 License  
-Distributed under the MIT License. See `LICENSE` for details.
+Distributed under the MIT License.
 
 ## Gallery 
 

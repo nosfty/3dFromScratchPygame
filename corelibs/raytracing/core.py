@@ -86,43 +86,31 @@ class Ray3D:
 
 
 def ray_sphere_intersection(ray: Ray3D, sphere_center: Vector3, sphere_radius: float):
-    """
-    Проверяет пересечение луча со сферой и возвращает точки пересечения.
+ 
 
-    Параметры:
-        ray: луч (Ray3D)
-        sphere_center: центр сферы (Vector3)
-        sphere_radius: радиус сферы (float)
-
-    Возвращает:
-        (t1, t2) - параметры t для точек пересечения (меньший первый)
-        Если пересечений нет, возвращает (None, None)
-        Если касается (одна точка), t1 == t2
-    """
-    # Вектор от начала луча до центра сферы
     oc = ray.origin - sphere_center
 
-    # Коэффициенты квадратного уравнения at^2 + bt + c = 0
+
     a = ray.direction.dot(ray.direction)
     b = 2.0 * oc.dot(ray.direction)
     c = oc.dot(oc) - sphere_radius * sphere_radius
 
-    # Дискриминант
+    
     discriminant = b * b - 4 * a * c
 
     if discriminant < 0:
         # Нет пересечений
         return None, None
     elif discriminant == 0:
-        # Луч касается сферы (одна точка)
+     
         t = -b / (2.0 * a)
         return t, t
     else:
-        # Два пересечения
+        
         sqrt_discr = math.sqrt(discriminant)
         t1 = (-b - sqrt_discr) / (2.0 * a)
         t2 = (-b + sqrt_discr) / (2.0 * a)
 
-        # Возвращаем в порядке возрастания
+     
         return (t1, t2) if t1 < t2 else (t2, t1)
 
